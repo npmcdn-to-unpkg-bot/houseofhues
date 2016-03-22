@@ -9,3 +9,8 @@ Room.create(name: 'Kitchen')
 Room.create(name: 'Living Room')
 Room.create(name: 'Bedroom')
 Room.create(name: 'Bathroom')
+
+Color.create(name: 'Rose Gold')
+Color.create(name: 'Serenity')
+Color.create(name: 'Marsala')
+Color.create(name: 'Radiant Orchard')
