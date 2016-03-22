@@ -1,2 +1,8 @@
-<h1>Looks#new</h1>
-<p>Find me in app/views/looks/new.html.erb</p>
+<h1>Add new look to <%=@look_title%></h1>
+
+<%= form_for @look, url: {action: "create"} do |f| %>
+<%= hidden_field_tag :look_id, params[:id] %>
+  Image URL: <%= f.text_field :img %>
+  Title: <%= f.text_field :title %>
+  <%= f.submit "Add Look" %>
+<% end %>
