@@ -1,7 +1,10 @@
-<div id="grid">
-  <% @looks.each do |look| %>
-    <div class="grid-item">
-      <img src="<%=look.img%>" class="grid-img">
-    </div>
-  <% end %>
+
+<div id="grid-wrapper">
+  <div class="grid js-grid">
+    <% @looks.each do |look| %>
+      <div class="grid__item js-item">
+        <img src="<%=look.img%>" class="grid_img">
+      </div>
+    <% end %>
+  </div>
 </div>
