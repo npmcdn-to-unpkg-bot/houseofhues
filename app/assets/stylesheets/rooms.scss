@@ -1,3 +1,45 @@
-// Place all the styles related to the Rooms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+[class^="room"] {
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+
+  h1 {
+    position: relative;
+    color: white;
+    top: 75%;
+    left: -5%;
+    text-shadow: 2px 2px 2px black;
+    font-size: 3em;
+  }
+}
+
+.room1 {
+  background-image:url("kitchen.jpg");
+}
+
+.room2 {
+  background-image:url("living.jpg");
+}
+
+.room3 {
+  background-image:url("bed.jpg");
+}
+
+.room4 {
+  background-image:url("bath.jpg");
+}
+
+@media (max-width: 767px) {
+  [class^="room"] {
+    width: 80%;
+    margin-left: 13%;
+  }
+}
+
+@media (min-width: 992px) {
+  [class^="room"] {
+    h1 {
+      font-size: 2.2em;
+    }
+  }
+}
