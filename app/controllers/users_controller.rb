@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   #boosts given
   end
 
-  def user_collection
+  def collection
     @user = User.find(params[:id])
     @user_email = @user.email
   end
