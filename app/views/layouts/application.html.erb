@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Houseofhues</title>
+  <title>~ House of Hues ~</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">House of Hues</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li>Blah</li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-<%= yield %>
+  <div class="container-fluid">
+    <%= yield %>
+  </div>
+
+  <footer class="container=fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8">
+        <p>(c) House of Hues</p>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <p>Made with 💜 by <a href="https://github.com/alisonmae/houseofhues">Lauren, Alie Mae, James, & Noble</a></p>
+      </div>
+    </div>
+  </footer>
 
 </body>
+  <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </html>
