@@ -18,9 +18,10 @@
 $(function() {
   var boxDiv = $('.room1').width();
   $('[class^="room"]').css({'height':boxDiv+'px'});
-
   $(window).on('resize', function(){
     boxDiv = $('.room1').width();
     $('[class^="room"]').css({'height':boxDiv+'px'});
   });
+
+  $('#grid').wookmark(options);
 });

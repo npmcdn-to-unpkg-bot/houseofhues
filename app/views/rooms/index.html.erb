@@ -1,7 +1,9 @@
-<div class="row text-center">
-  <% @rooms.each do |room| %>
-    <div class="room<%=room.id%> col-xs-12 col-sm-6 col-md-3">
-      <h1><%= room.name %></h1>
+<%= form_tag("/rooms", method: "post") do %>
+  <% @colors.each do |color| %>
+    <div class="color">
+      <%= radio_button_tag(:color_select, color.id) %>
+      <%= label_tag("color_select_#{color.id}", "#{color.name}") %>
     </div>
   <% end %>
-</div>
+  <%= submit_tag("Choose This Color") %>
+<% end %>
