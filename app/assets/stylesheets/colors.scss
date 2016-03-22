@@ -4,7 +4,7 @@
 
 .color {
   input {
-    //visibility: hidden;
+    visibility: hidden;
 
     &:checked + label {
       background-color: blue;
