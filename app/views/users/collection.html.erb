@@ -1,0 +1,21 @@
+<h1><%= @user.email %>'s Looks</h1>
+
+<p id="notice"><%= notice %></p>
+
+<!-- <p>
+  <strong>Name:</strong>
+  <%= @look.name %>
+</p> -->
+
+<p>
+  <strong>Look:</strong>
+  <%= @look.id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @look.user %>
+</p>
+
+<%= link_to 'My Profile', users_path %>
+<%= link_to 'Look Page', looks_path(@look) %>
