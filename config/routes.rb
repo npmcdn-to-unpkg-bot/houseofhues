@@ -1,4 +1,29 @@
 Rails.application.routes.draw do
+  get 'looks/new'
+
+  get 'looks/create'
+
+  get 'looks/show'
+
+  get 'looks/destroy'
+
+  get 'looks/update'
+
+  get 'colorrooms/show'
+
+  get 'colors/show'
+
+  get 'rooms/show'
+
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/show'
+
+  devise_for :users
+  # devise_for :installs
+  # devise_for :installs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
