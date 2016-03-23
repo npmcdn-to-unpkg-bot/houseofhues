@@ -1,10 +1,6 @@
 class RoomsController < ApplicationController
-  def index
+  def create
     @colors = Color.all
     @rooms = Room.all
-  end
-
-  def create
-    raise
   end
 end
