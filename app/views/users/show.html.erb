@@ -1,2 +1,8 @@
 <h1>Welcome, <%= @user.email %></h1>
 <%= @last_login %>
+<% @collection.each do |f| %>
+<div class="grid-item">
+  <h4><%=f.title%></h4>
+  <img src="<%=f.img%>" class="grid-img">
+</div>
+<% end %>

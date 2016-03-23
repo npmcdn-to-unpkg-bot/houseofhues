@@ -14,3 +14,7 @@ Color.create(name: 'Rose Gold')
 Color.create(name: 'Serenity')
 Color.create(name: 'Marsala')
 Color.create(name: 'Radiant Orchard')
+
+Look.create(boosts: '3')
+Look.create(boosts: '5')
+Look.create(boosts: '8')
