@@ -16,13 +16,22 @@
 //= require_tree .
 
 $(function() {
+  //get width of a room div
   var boxDiv = $('.room1').width();
+  //make all room divs squares by applying a height equal to the width
   $('[class^="room"]').css({'height':boxDiv+'px'});
+  //repeat above code if window is resized
   $(window).on('resize', function(){
     boxDiv = $('.room1').width();
     $('[class^="room"]').css({'height':boxDiv+'px'});
   });
 
+  //make clicking on a room div submit the form
+  $('[class^="room"]').click(function () {
+    $('form').submit();
+  });
+
+  //initialize masonry.js
   $('.grid').masonry({
     itemSelector: '.grid-item',
   });

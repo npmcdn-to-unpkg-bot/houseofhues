@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :looks
   resources :users
 
+  post '/looks/:id', to: 'looks#findcrid'
+
   root 'colors#index'
 
 end

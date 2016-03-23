@@ -1,5 +1,5 @@
 class Room < ActiveRecord::Base
-  has_many :colors, through: :colorroom
-  has_many :looks, through: :colorroom
-  has_many :colorrooms
+  has_many :color_rooms
+  has_many :colors, through: :color_rooms
+  has_many :looks, through: :color_rooms
 end

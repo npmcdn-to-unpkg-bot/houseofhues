@@ -1,4 +1,4 @@
 class Color < ActiveRecord::Base
-  has_many :colorrooms
-  has_many :rooms, through: :colorrooms
+  has_many :color_rooms
+  has_many :rooms, through: :color_rooms
 end

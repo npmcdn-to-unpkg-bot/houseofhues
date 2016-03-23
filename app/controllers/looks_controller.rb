@@ -17,7 +17,16 @@ class LooksController < ApplicationController
     @look.save
  end
 
+ def findcrid
+   @color_id = params[:color_id]
+   @room_id = params[:room_id]
+   @colorroom_id = ColorRoom.find_by(color_id: @color_id, room_id: @room_id)
+
+   redirect_to look_path(3)
+ end
+
   def show
+    @looks = Look.find_by(color_room_id: @colorroom_id)
   end
 
   def destroy

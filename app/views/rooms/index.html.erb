@@ -1,12 +1,14 @@
 
 <div class="container">
   <div class="row text-center">
-     <% @rooms.each do |room| %>
-      <a href="../looks?color_id=<%=@color_id%>&room_id=<%=room.id%>">
+    <%= form_tag url_for(:controller => "looks", :action => "findcrid"), :method => "post" do %>
+      <% @rooms.each do |room| %>
         <div class="room<%=room.id%> col-xs-12 col-sm-6 col-md-3">
           <h1><%= room.name %></h1>
         </div>
-      </a>
+        <%= hidden_field_tag(:room_id, room.id) %>
+        <%= hidden_field_tag(:color_id, @color_id) %>
+      <% end %>
     <% end %>
   </div>
 </div>
