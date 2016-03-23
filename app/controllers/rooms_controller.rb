@@ -1,6 +1,6 @@
 class RoomsController < ApplicationController
-  def create
-    @colors = Color.all
+  def index
     @rooms = Room.all
+    @color_id = params[:color_id]
   end
 end
