@@ -11,9 +11,10 @@ class LooksController < ApplicationController
 
   def create
     @look = Look.new
-    @look.user_id = params["user_id"]
+    @look.user_id = params["look"]["user_id"]
     @look.img = params["look"]["img"]
     @look.title = params["look"]["title"]
+    @look.color = params["look"]["color_room_id"]
     @look.save
  end
 
@@ -21,6 +22,9 @@ class LooksController < ApplicationController
   end
 
   def destroy
+    @look = Look.find(params[:id])
+    @look.destroy
+    redirect_to "/looks"
   end
 
   def update

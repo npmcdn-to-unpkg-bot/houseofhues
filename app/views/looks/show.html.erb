@@ -1,2 +1,10 @@
-<h1>Looks#show</h1>
-<p>Find me in app/views/looks/show.html.erb</p>
+<h1>Looks</h1>
+<div class="container grid">
+  <div id="grid-item-wrapper">
+      <div class="grid-item">
+        <h4><%=look.title%></h4>
+        <img src="<%=look.img%>" class="grid-img">
+      </div>
+    <% end %>
+</div>
+<%= input type='submit' id='look.user_id'value='Delete' %>

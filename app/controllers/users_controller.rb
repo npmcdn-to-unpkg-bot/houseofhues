@@ -12,7 +12,7 @@ class UsersController < ApplicationController
   @last_login = @user.last_sign_in_at
   @avatar = @user.avatar
   @collection = @user.looks
-  # @boosts_received = @user.boosts 
+  # @boosts_received = @user.boosts
   #submitted looks
   #boosts recieved
   #boosts given
