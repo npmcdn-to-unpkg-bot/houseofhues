@@ -3,12 +3,27 @@
   margin: 20px 5%;
 }
 
+#grid-item-wrapper {
+  text-align: center;
+}
+
 .grid__item {
   display: inline-block;
   vertical-align: top;
+
+  h4 {
+    text-align: left;
+    position: relative;
+    top: 6px;
+    left: 5px;
+  }
 }
 
 .grid_img {
   max-width: 350px;
   height: auto;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin: 0 2px;
 }
