@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.3'
 
 gem 'devise', '3.5.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -27,7 +28,7 @@ gem 'babosa'
 gem 'paperclip', '~> 4.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'cowsay'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
