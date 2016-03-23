@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 20160324001734) do
     t.string "name"
   end
 
+  create_table "looks", force: :cascade do |t|
+    t.integer  "color_id"
+    t.integer  "room_id"
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "img"
+    t.integer  "boosts",     default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "looks", ["color_id"], name: "index_looks_on_color_id", using: :btree
+  add_index "looks", ["room_id"], name: "index_looks_on_room_id", using: :btree
+  add_index "looks", ["user_id"], name: "index_looks_on_user_id", using: :btree
+
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "name"
@@ -71,5 +86,8 @@ ActiveRecord::Schema.define(version: 20160324001734) do
 
   add_foreign_key "color_rooms", "colors"
   add_foreign_key "color_rooms", "rooms"
+  add_foreign_key "looks", "colors"
+  add_foreign_key "looks", "rooms"
+  add_foreign_key "looks", "users"
   add_foreign_key "profiles", "users"
 end
