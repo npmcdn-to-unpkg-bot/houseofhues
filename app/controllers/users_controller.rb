@@ -23,4 +23,10 @@ class UsersController < ApplicationController
     @user_email = @user.email
   end
 
+  def destroy
+    @look = Look.find(params[:id])
+    @look.destroy
+    redirect_to "/looks/:id"
+  end
+
 end
