@@ -1,0 +1,12 @@
+
+<div class="container">
+  <div class="row text-center">
+     <% @rooms.each do |room| %>
+      <a href="../looks?color_id=<%=@color_id%>&room_id=<%=room.id%>">
+        <div class="room<%=room.id%> col-xs-12 col-sm-6 col-md-3">
+          <h1><%= room.name %></h1>
+        </div>
+      </a>
+    <% end %>
+  </div>
+</div>

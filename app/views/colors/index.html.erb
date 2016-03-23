@@ -1,14 +1,10 @@
 
 <div class="container">
   <div class="row">
-  <%= form_tag("/rooms", method: "post") do %>
     <% @colors.each do |color| %>
-      <div class="color">
-        <%= radio_button_tag(:color_select, color.id) %>
-        <%= label_tag("color_select_#{color.id}", "#{color.name}") %>
-      </div>
+    <div class="color">
+      <a href="/rooms?color_id=<%=color.id%>"><%= color.name %></a>
+    </div>
     <% end %>
-    <%= submit_tag("Choose This Color") %>
-  <% end %>
-</div>
+  </div>
 </div>
