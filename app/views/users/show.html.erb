@@ -4,5 +4,6 @@
 <div class="grid-item">
   <h4><%=f.title%></h4>
   <img src="<%=f.img%>" class="grid-img">
+  <%= link_to "Delete", @look, :confirm => "Are you sure?", :method => :delete %>
 </div>
 <% end %>
