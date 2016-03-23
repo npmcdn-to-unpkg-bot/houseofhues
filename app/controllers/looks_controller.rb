@@ -16,6 +16,7 @@ class LooksController < ApplicationController
     @look.title = params["look"]["title"]
     @look.color = params["look"]["color_room_id"]
     @look.save
+    @look.acts_as_list = params["look"]["boosts"]
  end
 
   def show
@@ -29,4 +30,11 @@ class LooksController < ApplicationController
 
   def update
   end
-end
+
+  def trend
+    @looks = Look.find(params[:boosts])
+    @looks.look_items.first.move_to_bottom
+    @looks.look_items.last.move_higher
+  end
+
+end 

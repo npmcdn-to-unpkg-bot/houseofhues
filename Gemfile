@@ -31,7 +31,7 @@ gem 'paperclip', '~> 4.2'
 gem 'cowsay'
 # Use Unicorn as the app server
 # gem 'unicorn'
-
+gem 'acts_as_list'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
