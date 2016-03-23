@@ -1,13 +1,12 @@
 
-
 .grid-item h4 {
-  text-align: left;
   position: relative;
   top: 6px;
   left: 5px;
 }
 
 .grid-img {
+  display: block;
   width: 350px;
   height: auto;
   padding: 4px;
@@ -19,6 +18,15 @@
 @media (min-width: 768px) {
   .grid-item {
     float: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid-item h4 {
+    text-align: center;
+  }
+  .grid-img {
+    margin: auto;
   }
 }
 
