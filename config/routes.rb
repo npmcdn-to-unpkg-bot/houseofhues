@@ -3,8 +3,12 @@ Rails.application.routes.draw do
 
   resources :colors
   resources :rooms
-  resources :looks
   resources :users
+  resources :looks do
+    member do
+      post 'upvote'
+    end
+  end
 
   post '/looks/:id', to: 'looks#findcrid'
 

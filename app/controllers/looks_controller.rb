@@ -46,4 +46,10 @@ class LooksController < ApplicationController
     @looks.look_items.last.move_higher
   end
 
-end 
+  def upvote
+    @look = Look.find(params[:id])
+    @look.votes.create
+    redirect_to(looks_path)
+  end
+
+end
