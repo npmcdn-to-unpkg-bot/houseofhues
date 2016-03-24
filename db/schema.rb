@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160323225242) do
+=======
+ActiveRecord::Schema.define(version: 20160324001734) do
+>>>>>>> e2da356606f4c1fd2dff7a707f6df53ca1e0efd4
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,15 +33,18 @@ ActiveRecord::Schema.define(version: 20160323225242) do
   end
 
   create_table "looks", force: :cascade do |t|
-    t.integer "color_room_id"
-    t.integer "user_id"
-    t.string  "title"
-    t.string  "img"
-    t.integer "boosts",        default: 0
-    t.integer "position"
+    t.integer  "color_id"
+    t.integer  "room_id"
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "img"
+    t.integer  "boosts",     default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
-  add_index "looks", ["color_room_id"], name: "index_looks_on_color_room_id", using: :btree
+  add_index "looks", ["color_id"], name: "index_looks_on_color_id", using: :btree
+  add_index "looks", ["room_id"], name: "index_looks_on_room_id", using: :btree
   add_index "looks", ["user_id"], name: "index_looks_on_user_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
@@ -89,7 +96,8 @@ ActiveRecord::Schema.define(version: 20160323225242) do
 
   add_foreign_key "color_rooms", "colors"
   add_foreign_key "color_rooms", "rooms"
-  add_foreign_key "looks", "color_rooms"
+  add_foreign_key "looks", "colors"
+  add_foreign_key "looks", "rooms"
   add_foreign_key "looks", "users"
   add_foreign_key "profiles", "users"
 end

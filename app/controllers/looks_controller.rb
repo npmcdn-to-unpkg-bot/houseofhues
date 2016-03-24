@@ -16,19 +16,22 @@ class LooksController < ApplicationController
     @look.title = params["look"]["title"]
     @look.color = params["look"]["color_room_id"]
     @look.save
-    @look.acts_as_list = params["look"]["boosts"]
- end
+    #@look.acts_as_list = params["look"]["boosts"]
+  end
 
- def findcrid
-   @color_id = params[:color_id]
-   @room_id = params[:room_id]
-   @colorroom_id = ColorRoom.find_by(color_id: @color_id, room_id: @room_id)
+  def search
+    @color_id = params[:color_id]
+    @room_id = params[:room_id]
 
-   redirect_to look_path(3)
- end
+    if @room_id == nil
+      redirect_to controller: "rooms", action: "index", color_id: @color_id
+      else if @color_id != nil && @room_id != nil
+        @looks = Look.where(color_id: @color_id, room_id: @room_id)
+      end
+    end
+  end
 
   def show
-    @looks = Look.find_by(color_room_id: @colorroom_id)
   end
 
   def destroy

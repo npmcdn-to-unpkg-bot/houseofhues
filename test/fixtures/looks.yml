@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  roomcolor_id: 
+  color_id: 
+  room_id: 
   user_id: 
   title: MyString
   img: MyString
-  boosts: 1
+  boost: 1
 
 two:
-  roomcolor_id: 
+  color_id: 
+  room_id: 
   user_id: 
   title: MyString
   img: MyString
-  boosts: 1
+  boost: 1
