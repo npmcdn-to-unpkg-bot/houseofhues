@@ -11,17 +11,21 @@ class LooksController < ApplicationController
 
   def create
     @look = Look.new
+    @look = current_user.looks.build(params[:look])
     @look.user_id = params["look"]["user_id"]
     @look.img = params["look"]["img"]
     @look.title = params["look"]["title"]
     @look.color = params["look"]["color_room_id"]
     @look.save
+    #@look = current_user.looks.build(params[:look])
     #@look.acts_as_list = params["look"]["boosts"]
   end
 
   def search
     @color_id = params[:color_id]
     @room_id = params[:room_id]
+    @user_id = params[:user_id]
+
 
     if @room_id == nil
       redirect_to controller: "rooms", action: "index", color_id: @color_id
