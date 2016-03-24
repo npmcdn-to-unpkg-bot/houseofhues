@@ -44,7 +44,7 @@ class LooksController < ApplicationController
   def destroy
     @look = Look.find(params[:id])
     @look.destroy
-    redirect_to "/looks"
+    redirect_to :back
   end
 
   def update

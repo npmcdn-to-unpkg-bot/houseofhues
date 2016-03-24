@@ -7,6 +7,14 @@
   margin: 0 25px 10px 0;
 }
 
+ul {
+  li {
+    display: inline;
+    float: left;
+    list-style-type: none;
+  }
+}
+
 .grid-item h4 {
   position: relative;
   top: 6px;
@@ -14,8 +22,7 @@
 }
 
 .grid-img {
-  display: block;
-  width: 350px;
+  max-width: 350px;
   height: auto;
   padding: 4px;
   border: 1px solid #ccc;
