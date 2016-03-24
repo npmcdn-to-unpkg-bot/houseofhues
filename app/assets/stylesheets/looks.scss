@@ -36,13 +36,16 @@
   }
 }
 
+.look-info {
+  text-align: left;
+}
+
 .grid-img {
   max-width: 350px;
   height: auto;
   padding: 4px;
   border: 1px solid #ccc;
   border-radius: 3px;
-  margin: 0 2px 15px;
 }
 
 @media (min-width: 768px) {
