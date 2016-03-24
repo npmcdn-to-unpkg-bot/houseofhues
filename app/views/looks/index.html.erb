@@ -11,3 +11,15 @@
     <% end %>
   </div>
 </div>
+
+
+<% @looks.each do |look| %>
+  <tr>
+    <td><%= look.title %></td>
+    <td><%= pluralize(look.votes.count, "boost") %></td>
+    <td><%= button_to '+1', upvote_look_path(look), method: :post %></td>
+    <td><%= link_to 'Show', look %></td>
+    <td><%= link_to 'Edit', edit_look_path(look) %></td>
+    <td><%= link_to 'Destroy', look, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
