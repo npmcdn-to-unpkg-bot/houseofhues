@@ -61,8 +61,15 @@ class LooksController < ApplicationController
 
   def upvote
     @look = Look.find(params[:id])
+    Look.increment_counter(:boosts, params[:id])
     @look.votes.create
     redirect_to(looks_path)
   end
+  #
+  # def update_look_boosts
+  #   @look = Look.find(@look.id)
+  #   self.looks.boosts += 1
+  #   self.looks.save
+  # end
 
 end
