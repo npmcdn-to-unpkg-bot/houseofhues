@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160324001734) do
+ActiveRecord::Schema.define(version: 20160324171911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160324001734) do
     t.integer  "boosts",     default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.integer  "position"
   end
 
   add_index "looks", ["color_id"], name: "index_looks_on_color_id", using: :btree
@@ -80,6 +81,15 @@ ActiveRecord::Schema.define(version: 20160324001734) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+<<<<<<< HEAD
+=======
+  create_table "votes", force: :cascade do |t|
+    t.integer  "look_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+>>>>>>> e67181c0794e9a61af0a34d3cca9ec61dbf381c6
   add_foreign_key "looks", "colors"
   add_foreign_key "looks", "rooms"
   add_foreign_key "looks", "users"

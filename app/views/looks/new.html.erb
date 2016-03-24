@@ -4,5 +4,9 @@
 <%= hidden_field_tag :look_id, params[:id] %>
   Image URL: <%= f.text_field :img %>
   Title: <%= f.text_field :title %>
+
+  <%= hidden_field_tag(:color_id, @color_id) %>
+  <%= hidden_field_tag(:room_id, @room_id) %>
+
   <%= f.submit "Add Look" %>
 <% end %>
