@@ -12,7 +12,8 @@ class LooksController < ApplicationController
   end
 
   def create
-    @look = Look.new
+    @look = current_user.looks.build
+    @look.user_id = params["look"]["user_id"]
     @look.img = params["look"]["img"]
     @look.title = params["look"]["title"]
 
@@ -20,14 +21,14 @@ class LooksController < ApplicationController
     @look.color_id = params[:color_id]
     @look.room_id = params[:room_id]
     @look.save
-
-    render :text => '<script type="text/javascript">alert("Success!"); window.close(); window.opener.location.reload(false);</script>'
-    #@look.acts_as_list = params["look"]["boosts"]
-  end
+    render :text => '<script type="text/javascript">alert("Look Added!"); window.close(); window.opener.location.reload(false);</script>'
+    end
 
   def search
     @color_id = params[:color_id]
     @room_id = params[:room_id]
+    @user_id = params[:user_id]
+
 
     if @room_id == nil
       redirect_to controller: "rooms", action: "index", color_id: @color_id
