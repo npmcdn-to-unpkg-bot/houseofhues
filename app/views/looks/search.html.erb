@@ -1,0 +1,11 @@
+
+<div class="container grid">
+  <div id="grid-item-wrapper">
+    <% @looks.each do |look| %>
+      <div class="grid-item">
+        <h4><%=look.title%></h4>
+        <img src="<%=look.img%>" class="grid-img">
+      </div>
+    <% end %>
+  </div>
+</div>
