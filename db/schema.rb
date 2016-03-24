@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160323210825) do
+ActiveRecord::Schema.define(version: 20160324001734) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,18 +27,6 @@ ActiveRecord::Schema.define(version: 20160323210825) do
   create_table "colors", force: :cascade do |t|
     t.string "name"
   end
-
-  create_table "looks", force: :cascade do |t|
-    t.integer "color_room_id"
-    t.integer "user_id"
-    t.string  "title"
-    t.string  "img"
-    t.integer "boosts",        default: 0
-    t.integer "position"
-  end
-
-  add_index "looks", ["color_room_id"], name: "index_looks_on_color_room_id", using: :btree
-  add_index "looks", ["user_id"], name: "index_looks_on_user_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
@@ -83,7 +71,5 @@ ActiveRecord::Schema.define(version: 20160323210825) do
 
   add_foreign_key "color_rooms", "colors"
   add_foreign_key "color_rooms", "rooms"
-  add_foreign_key "looks", "color_rooms"
-  add_foreign_key "looks", "users"
   add_foreign_key "profiles", "users"
 end
