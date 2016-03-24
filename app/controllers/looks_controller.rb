@@ -23,7 +23,12 @@ class LooksController < ApplicationController
     @color_id = params[:color_id]
     @room_id = params[:room_id]
 
-    @looks = Look.where(color_id: @color_id, room_id: @room_id)
+    if @room_id == nil
+      redirect_to controller: "rooms", action: "index", color_id: @color_id
+      else if @color_id != nil && @room_id != nil
+        @looks = Look.where(color_id: @color_id, room_id: @room_id)
+      end
+    end
   end
 
   def show

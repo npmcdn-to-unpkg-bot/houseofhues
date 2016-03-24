@@ -3,7 +3,7 @@
   <div class="row">
     <% @colors.each do |color| %>
     <div class="color">
-      <a href="/rooms?color_id=<%=color.id%>"><%= color.name %></a>
+      <a href="/looks/search?color_id=<%=color.id%>"><%= color.name %></a>
     </div>
     <% end %>
   </div>
