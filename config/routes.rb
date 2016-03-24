@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   end
 
   get '/looks/search' => 'looks#search'
-  get '/rooms', :path => '/looks/search'
 
   get ':id' => 'users#show', as: :user_profile
   get ':id/setting' => 'users#edit', as: :user_setting
