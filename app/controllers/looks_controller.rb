@@ -6,16 +6,22 @@ class LooksController < ApplicationController
 
   def new
     @look = Look.new
-    @looks_id = params[:id]
+
+    @color_id = params[:color_id]
+    @room_id = params[:room_id]
   end
 
   def create
     @look = Look.new
-    @look.user_id = params["look"]["user_id"]
     @look.img = params["look"]["img"]
     @look.title = params["look"]["title"]
-    @look.color = params["look"]["color_room_id"]
+
+    @look.user_id = current_user.id
+    @look.color_id = params[:color_id]
+    @look.room_id = params[:room_id]
     @look.save
+
+    
     #@look.acts_as_list = params["look"]["boosts"]
   end
 
