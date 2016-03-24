@@ -1,9 +1,15 @@
-<h1>Welcome, <%= @user.email %></h1>
-<%= @last_login %>
-<% @collection.each do |f| %>
-<div class="grid-item">
-  <h4><%=f.title%></h4>
-  <img src="<%=f.img%>" class="grid-img">
-  <%= link_to "Delete", @look, :confirm => "Are you sure?", :method => :delete %>
+
+<div class="container">
+  <div class="row">
+    <h1><%= @user.email %>'s Profile</h1>
+    <h3>Last login: <%= @last_login %></h3>
+    <h3># of Looks Submitted: <%=@number_looks%></h3>
+    <h3>Submitted Looks ↓</h3>
+    <% @looks.each do |f| %>
+      <div class="grid-item">
+        <h4><%=f.title%></h4>
+        <img src="<%=f.img%>" class="grid-img">
+      </div>
+    <% end %>
+    </div>
 </div>
-<% end %>
