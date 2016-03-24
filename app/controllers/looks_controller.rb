@@ -12,7 +12,7 @@ class LooksController < ApplicationController
   end
 
   def create
-    @look = Look.new
+    @look = current_user.looks.build
     @look.user_id = params["look"]["user_id"]
     @look.img = params["look"]["img"]
     @look.title = params["look"]["title"]
