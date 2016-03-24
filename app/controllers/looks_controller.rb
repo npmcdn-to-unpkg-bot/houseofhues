@@ -21,7 +21,7 @@ class LooksController < ApplicationController
     @look.room_id = params[:room_id]
     @look.save
 
-    
+    render :text => '<script type="text/javascript">alert("Success!"); window.close(); window.opener.location.reload(false);</script>'
     #@look.acts_as_list = params["look"]["boosts"]
   end
 

@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 20160324171911) do
     t.integer  "boosts",     default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.integer  "position"
   end
 
   add_index "looks", ["color_id"], name: "index_looks_on_color_id", using: :btree
