@@ -7,18 +7,33 @@
   margin: 0 25px 10px 0;
 }
 
-ul {
-  li {
-    display: inline;
-    float: left;
-    list-style-type: none;
-  }
+.boost-button {
+  border-radius: 3px;
+  position: absolute;
+  bottom: 20px;
+  left: 7px;
 }
 
-.grid-item h4 {
+.img-container {
   position: relative;
+}
+
+.delete {
+  position: absolute;
   top: 6px;
-  left: 5px;
+  right: 8px;
+}
+
+.grid-item {
+
+  h4 {
+    position: relative;
+    top: 6px;
+    left: 5px;
+  }
+  p {
+    line-height: .6em;
+  }
 }
 
 .grid-img {
@@ -27,7 +42,7 @@ ul {
   padding: 4px;
   border: 1px solid #ccc;
   border-radius: 3px;
-  margin: 0 2px;
+  margin: 0 2px 15px;
 }
 
 @media (min-width: 768px) {
@@ -45,8 +60,8 @@ ul {
   }
 }
 
-@media (min-width: 1470px) {
+@media (min-width: 1530px) {
   .container.grid {
-      width: 1450px;
+      width: 1530px;
   }
 }

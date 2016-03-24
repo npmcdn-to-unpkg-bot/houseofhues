@@ -4,15 +4,13 @@
     <% @looks.each do |look| %>
       <div class="grid-item">
         <h4><%=look.title%></h4>
-        <img src="<%=look.img%>" class="grid-img">
-        <ul>
-          <li><%= pluralize(look.votes.count, "boost") %></li>
-          <li><%= button_to '+1', upvote_look_path(look), method: :post %></li>
-          <!-- <td><%= link_to 'Show', look %></td>
-          <td><%= link_to 'Edit', edit_look_path(look) %></td> -->
-          <li><%= link_to 'Destroy', look, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-        </ul>
-        <h4>uploaded by <a href="/<%=look.user.id%>"><%= look.user.email %></a></h4>
+        <div class="img-container">
+          <img src="<%=look.img%>" class="grid-img">
+          <div class="delete"><%= link_to image_tag('square.png'), look, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+          <div class="boost-button"><%= button_to '+1', upvote_look_path(look), method: :post %></div>
+        </div>
+        <p>boosted <b><%=look.votes.count%></b> times</p>
+        <p>uploaded by <a href="/<%=look.user.id%>"><%= look.user.email %></a></p>
       </div>
     <% end %>
   </div>
