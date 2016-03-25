@@ -60,10 +60,6 @@ footer {
   padding-bottom: 100px;
 }
 
-h1 {
-  text-shadow: 1px 1px 1px black;
-}
-
 @media (min-width: 678px) {
   footer {
     display: block;

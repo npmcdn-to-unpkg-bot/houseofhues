@@ -2,12 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.color {
-  input {
-    visibility: hidden;
+.grid-item .home-look-title {
+  top: 0;
+}
 
-    &:checked + label {
-      background-color: blue;
-    }
+#banner {
+  margin-top: -20px;
+  height: 450px;
+  width: 100%;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-image: url("house.jpeg");
+
+  h1 {
+    text-align: center;
+    position: relative;
+    font-size: 4em;
+    top: 70%;
+    color: white;
+    text-shadow: 2px 2px 3px black;
   }
 }

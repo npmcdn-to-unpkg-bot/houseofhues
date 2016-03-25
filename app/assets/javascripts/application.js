@@ -31,16 +31,16 @@ $(function() {
   function logoColor(color_id) {
     if (color_id == '1') {
       $('#logo').css('background-color', '#b76e79');
-      $('h1, h2, h3, h4').css('color', '#b76e79');
+      $('h1').css('color', '#b76e79');
     } else if (color_id == '2') {
       $('#logo').css('background-color', '#b0cddf');
-      $('h1, h2, h3, h4').css('color', '#b0cddf');
+      $('h1').css('color', '#b0cddf');
     } else if (color_id == '3') {
       $('#logo').css('background-color', '#955251');
-      $('h1, h2, h3, h4').css('color', '#955251');
+      $('h1').css('color', '#955251');
     } else if (color_id == '4') {
       $('#logo').css('background-color', '#b163a3');
-      $('h1, h2, h3, h4').css('color', '#b163a3');
+      $('h1').css('color', '#b163a3');
     }
   };
   var color_id = getUrlParameter('color_id');

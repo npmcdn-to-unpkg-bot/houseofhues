@@ -1,14 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 parallax" id="banner">
+      <h1>Welcome to the House of Hues</h1>
+    </div>
+  </div>
+</div>
+
+
 
 <div class="container">
-  <div class="row">
-
-
     <div class="container grid">
-      <div id="grid-item-wrapper">
+      <div class="grid-item-wrapper">
         <h1>Trending Looks</h1>
         <% @looks_boosts.each do |look| %>
           <div class="grid-item">
-            <h4><%=look.title%></h4>
+            <h4 class="home-look-title"><%=look.title%></h4>
             <div class="look-info">
             <div class="img-container">
               <img src="<%=look.img%>" class="grid-img">
@@ -21,13 +27,15 @@
         <% end %>
       </div>
     </div>
+  </div>
 
+<div class="container">
     <div class="container grid">
-      <div id="grid-item-wrapper">
+      <div class="grid-item-wrapper">
         <h1>Newest Looks</h1>
         <% @looks_newest.each do |look| %>
           <div class="grid-item">
-            <h4><%=look.title%></h4>
+            <h4 class="home-look-title"><%=look.title%></h4>
             <div class="look-info">
             <div class="img-container">
               <img src="<%=look.img%>" class="grid-img">
@@ -40,6 +48,11 @@
         <% end %>
       </div>
     </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
 
     <p><%= link_to "View All Looks", looks_path %><p>
 
@@ -49,4 +62,5 @@
     </div>
     <% end %>
   </div>
+</div>
 </div>
