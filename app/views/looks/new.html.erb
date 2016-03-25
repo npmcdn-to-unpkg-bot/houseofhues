@@ -1,12 +1,23 @@
-<h1>Add new look to <%=@look_title%></h1>
 
-<%= form_for @look, url: {action: "create"} do |f| %>
-<%= hidden_field_tag :look_id, params[:id] %>
-  Image URL: <%= f.text_field :img %>
-  Title: <%= f.text_field :title %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center new-look">
+      <h1>Add New Look to<br><%=@color_name%> <%=@room_name%>s</h1>
+      <div class="look-inputs">
+        <%= form_for @look, url: {action: "create"} do |f| %>
+        <%= hidden_field_tag :look_id, params[:id] %>
+          <div class="look-title">
+          Title: <%= f.text_field :title %><br>
+        </div>
+        <div class="look-img">
+          Image URL: <%= f.text_field :img %><br>
+        </div>
+      </div>
+        <%= hidden_field_tag(:color_id, @color_id) %>
+        <%= hidden_field_tag(:room_id, @room_id) %>
 
-  <%= hidden_field_tag(:color_id, @color_id) %>
-  <%= hidden_field_tag(:room_id, @room_id) %>
-
-  <%= f.submit "Add Look" %>
-<% end %>
+        <%= f.submit "Add Look" %>
+      <% end %>
+    </div>
+  </div>
+</div>
