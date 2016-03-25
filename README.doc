@@ -27,10 +27,12 @@ House of Hues
 
 
     Research & Feasibility Assessment:
-
+      Assess aggregate team knowledge
+        -Areas of familiarity (relative strengths): CSS, Design
+        -Areas for knowledge development (relative weaknesses): MVC, Project Management
 
     Site Outline:
-
+      Developed from defining each table required and relationship to MVC
 
     Site Map & Wireframes:
       <img>
@@ -55,7 +57,7 @@ House of Hues
 
 
     Testing
-      
+
 
 
 
@@ -74,11 +76,11 @@ Alison Mae
 
 
 James
-  Rose:
+  Rose: I feel more comfortable with rails
 
-  Bud:
+  Bud: now that i understand rails better Im getting a lot of creative ideas for projects.
 
-  Thorn:
+  Thorn: join tables in databases, devise
 
   Seed:
 
