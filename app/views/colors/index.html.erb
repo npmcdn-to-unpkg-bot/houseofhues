@@ -6,12 +6,35 @@
   </div>
 </div>
 
-
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Find Your Next Room Inspiration</h1>
+      <p class="find text-center">House of Hues is a database of user-submitted interior design inspirations (looks) and allows users to find ideas based on color & room. If you like a look, give it a boost! You must sign up to submit a look or to use our search. 😀</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 text-center">
+      <p><h1><%= link_to "View All Looks", looks_path %><p>
+    </div>
+    <div class="col-xs-12 col-md-6 text-center color">
+      <h1>Start Search By Color</h1>
+      <p class="find">We currently offer a search by the<br> 2016, 2015, and 2014 colors of the year.</p>
+      <% @colors.each do |color| %>
+        <a href="/looks/search?color_id=<%=color.id%>">
+            <div>
+              <%= color.name %>
+            </div>
+        </a>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 <div class="container">
     <div class="container grid">
       <div class="grid-item-wrapper">
-        <h1>Trending Looks</h1>
+        <h1 class="home-title">Trending Looks</h1>
         <% @looks_boosts.each do |look| %>
           <div class="grid-item">
             <h4 class="home-look-title"><%=look.title%></h4>
@@ -30,37 +53,22 @@
   </div>
 
 <div class="container">
-    <div class="container grid">
-      <div class="grid-item-wrapper">
-        <h1>Newest Looks</h1>
-        <% @looks_newest.each do |look| %>
-          <div class="grid-item">
-            <h4 class="home-look-title"><%=look.title%></h4>
-            <div class="look-info">
-            <div class="img-container">
-              <img src="<%=look.img%>" class="grid-img">
-              <div class="boost-button"><%= button_to '+1', upvote_look_path(look), method: :post %></div>
-            </div>
-              <p>boosted <b><%=look.votes.count%></b> times</p>
-              <p>uploaded by <a href="/<%=look.user.id%>"><%= look.user.email %></a></p>
-            </div>
+  <div class="container grid">
+    <div class="grid-item-wrapper">
+      <h1 class="home-title">Newest Looks</h1>
+      <% @looks_newest.each do |look| %>
+        <div class="grid-item">
+          <h4 class="home-look-title"><%=look.title%></h4>
+          <div class="look-info">
+          <div class="img-container">
+            <img src="<%=look.img%>" class="grid-img">
+            <div class="boost-button"><%= button_to '+1', upvote_look_path(look), method: :post %></div>
           </div>
-        <% end %>
-      </div>
+            <p>boosted <b><%=look.votes.count%></b> times</p>
+            <p>uploaded by <a href="/<%=look.user.id%>"><%= look.user.email %></a></p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-
-    <p><%= link_to "View All Looks", looks_path %><p>
-
-    <% @colors.each do |color| %>
-    <div class="color">
-      <a href="/looks/search?color_id=<%=color.id%>"><%= color.name %></a>
-    </div>
-    <% end %>
-  </div>
-</div>
 </div>
