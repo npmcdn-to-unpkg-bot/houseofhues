@@ -1,20 +1,26 @@
 
 <div class="container">
-  <div class="row">
     <h1><%= @user.email %></h1>
     <h3>Last login: <%= @last_login %></h3>
       <hr />
     <h3><b><%=@number_looks%></b> Uploaded Looks</h3>
-    <% @looks.each do |look| %>
-      <div class="grid-item user">
-        <div class="grid-item">
-          <h4><%=look.title%></h4>
-          <div class="look-info">
-          <div class="img-container">
-            <div class="delete"><%= link_to image_tag('square.png'), look, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-        <img src="<%=look.img%>" class="grid-img">
-        <p>boosted <b><%=look.votes.count%></b> times</p>
+
+    <div class="container grid">
+      <div class="grid-item-wrapper">
+      <% @looks.each do |look| %>
+        <div class="grid-item user">
+          <div class="grid-item">
+            <h4><%=look.title%></h4>
+            <div class="look-info">
+              <div class="img-container">
+                <div class="delete"><%= link_to image_tag('square.png'), look, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                  <img src="<%=look.img%>" class="grid-img">
+                  <p>boosted <b><%=look.votes.count%></b> times</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
       </div>
-    <% end %>
     </div>
 </div>
