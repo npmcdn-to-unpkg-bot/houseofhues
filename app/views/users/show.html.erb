@@ -7,7 +7,11 @@
     <h3><b><%=@number_looks%></b> Uploaded Looks</h3>
     <% @looks.each do |look| %>
       <div class="grid-item user">
-        <h4><%=look.title%></h4>
+        <div class="grid-item">
+          <h4><%=look.title%></h4>
+          <div class="look-info">
+          <div class="img-container">
+            <div class="delete"><%= link_to image_tag('square.png'), look, method: :delete, data: { confirm: 'Are you sure?' } %></div>
         <img src="<%=look.img%>" class="grid-img">
         <p>boosted <b><%=look.votes.count%></b> times</p>
       </div>
