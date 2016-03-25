@@ -10,3 +10,9 @@
     top: 10px;
   }
 }
+
+@media (min-width: 768px) {
+  .grid-item {
+    float: left;
+  }
+}
