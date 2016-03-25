@@ -1,4 +1,5 @@
 class LooksController < ApplicationController
+    before_action :authenticate_user!
 
   def index
     @looks = Look.all
@@ -9,6 +10,9 @@ class LooksController < ApplicationController
 
     @color_id = params[:color_id]
     @room_id = params[:room_id]
+
+    @color_name = Color.find(@color_id).name
+    @room_name = Room.find(@room_id).name
   end
 
   def create
@@ -20,6 +24,7 @@ class LooksController < ApplicationController
     @look.user_id = current_user.id
     @look.color_id = params[:color_id]
     @look.room_id = params[:room_id]
+
     @look.save
 
     render :text => '<script type="text/javascript">alert("Look Added!"); window.close(); window.opener.location.reload(false);</script>'

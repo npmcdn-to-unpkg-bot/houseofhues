@@ -1,6 +1,7 @@
 
 <div class="container">
   <div class="row">
+    <h1>Choose A Room</h1>
     <% @rooms.each do |room| %>
     <a href="/looks/search?color_id=<%=@color_id%>&room_id=<%=room.id%>">
       <div class="room<%=room.id%> col-xs-12 col-sm-6 col-md-3">

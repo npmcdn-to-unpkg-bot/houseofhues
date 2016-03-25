@@ -17,11 +17,6 @@ class UsersController < ApplicationController
   @looks = @user.looks
   end
 
-  def collection
-    @user = User.find(params[:id])
-    @user_email = @user.email
-  end
-
   def destroy
     @look = Look.find(params[:id])
     @look.destroy

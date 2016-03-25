@@ -27,6 +27,26 @@
   }
 }
 
+#look_title, #look_img {
+  margin: 5px;
+  width: 50%;
+}
+
+.look-inputs {
+  width: 80%;
+}
+
+.look-title, .look-img {
+  text-align: right;
+}
+
+input[value="Add Look"] {
+  width: 80%;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
 .img-container {
   position: relative;
 }
@@ -118,6 +138,11 @@
 }
 
 @media (max-width: 767px) {
+
+  .new-look h1 {
+    margin: -5px auto 25px;
+  }
+
   .grid-item h4 {
     text-align: center;
   }
