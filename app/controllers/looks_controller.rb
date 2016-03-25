@@ -2,7 +2,7 @@ class LooksController < ApplicationController
     before_action :authenticate_user!
 
   def index
-    @looks = Look.all
+    @looks = Look.order(created_at: :desc)
   end
 
   def new
@@ -38,7 +38,7 @@ class LooksController < ApplicationController
     if @room_id == nil
       redirect_to controller: "rooms", action: "index", color_id: @color_id
       else if @color_id != nil && @room_id != nil
-        @looks = Look.where(color_id: @color_id, room_id: @room_id)
+        @looks = Look.where(color_id: @color_id, room_id: @room_id).order(created_at: :desc)
         @color_name = Color.find(@color_id).name
         @room_name = Room.find(@room_id).name
       end
@@ -46,6 +46,7 @@ class LooksController < ApplicationController
   end
 
   def show
+
   end
 
   def destroy
