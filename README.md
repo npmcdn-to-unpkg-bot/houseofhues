@@ -3,13 +3,13 @@ House of Hues
 1. Demo
 
   The Need:
-
+    An image-based way to understand and discover the harmonies & effects of color in physical space
 
   Our Solution
+    A Pinterst-like forum that redefines the 'Minimum' in "Minimum Viable Product"
 
-
-                    -Driver: Alison Mae
-                    -Presenters: Lauren, James, Noble & Alison Mae
+        -Driver: Alison Mae
+        -Presenters: Lauren, James, Noble & Alison Mae
 
 
 2. Describe your process from planning to production. Show wireframes and/or ERD’s.
@@ -24,7 +24,7 @@ House of Hues
           -Had a more defined/specific use case
 
     Needs Assessment:
-
+      Rails/Heroku/Gems/Communication
 
     Research & Feasibility Assessment:
       Assess aggregate team knowledge
