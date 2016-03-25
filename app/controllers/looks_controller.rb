@@ -11,9 +11,13 @@ class LooksController < ApplicationController
     @color_id = params[:color_id]
     @room_id = params[:room_id]
 
-    @color_name = Color.find(@color_id).name
+    if @color_id == nil && @room_id == nil
+      redirect_to :looks
+    else if @color_name = Color.find(@color_id).name
     @room_name = Room.find(@room_id).name
-  end
+      end
+    end 
+    end
 
   def create
     @look = current_user.looks.build
@@ -46,7 +50,6 @@ class LooksController < ApplicationController
   end
 
   def show
-
   end
 
   def destroy
@@ -70,4 +73,5 @@ class LooksController < ApplicationController
     @look.votes.create
     redirect_to(:back)
   end
+
 end
