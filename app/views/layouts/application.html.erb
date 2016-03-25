@@ -9,22 +9,18 @@
 </head>
 <body>
 
-  <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %> alert-dismissable">
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-          <%= value %>
-      </div>
-  <% end %>
 
+<div id="wrapper">
   <header>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">House of Hues</a>
+          <a class="navbar-brand" href="/">  <%= image_tag 'hoh.gif', :id => "logo" %></a>
         </div>
         <div class="text-right">
           <% if current_user %>
-              Welcome <%= current_user.email %> <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+              <p class="welcome">Welcome, <%= link_to current_user.email, users_path(current_user.id) %></p>
+              <p class="logout"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></p>
           <% else %>
               <%= link_to 'Login', new_user_session_path %>
           <% end %>
@@ -35,24 +31,23 @@
     </nav>
   </header>
 
-  <%= yield %>
+  <div id="content">
+    <%= yield %>
+  </div>
 
   <footer class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-sm-8">
-        <p>(c) House of Hues</p>
+      <div class="col-xs-12 col-sm-6 text-right">
+        <p>© House of Hues</p>
       </div>
-      <div class="col-xs-12 col-sm-4">
-        <p>Made with 💜 by <a href="https://github.com/alisonmae/houseofhues">Lauren, Alie Mae, James, & Noble</a></p>
+      <div class="col-xs-12 col-sm-6 text-right">
+        <p>Made with 💜 by <a href="https://github.com/alisonmae/houseofhues">Lauren, Allie Mae, James, & Noble</a></p>
       </div>
     </div>
   </footer>
-
+</div>
 </body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
   <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
   <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </html>

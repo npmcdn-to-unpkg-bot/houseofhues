@@ -1,7 +1,16 @@
 
-<div class="container grid">
+<div class="container">
+
+  <div class="row">
+    <div class="newlook">
+    <a href="javascript:window.open('/looks/new?color_id=<%=@color_id%>&room_id=<%=@room_id%>', 'NewLook', 'width=600,height=400');">+ New Look</a>
+  </div>
+</div>
+</div>
+
+  <div class="container grid">
   <div id="grid-item-wrapper">
-    <h1>All Looks</h1>
+    <h1><%=@color_name%> <%=@room_name%> Looks</h1>
     <% @looks.each do |look| %>
       <div class="grid-item">
         <h4><%=look.title%></h4>

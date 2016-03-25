@@ -1,9 +1,12 @@
 
 <div class="container">
   <div class="row">
+    <h1>editing this page first thing in the morning</h1>
+    <p><%= link_to "View All Looks", looks_path %><p>
+
     <% @colors.each do |color| %>
     <div class="color">
-      <a href="/rooms?color_id=<%=color.id%>"><%= color.name %></a>
+      <a href="/looks/search?color_id=<%=color.id%>"><%= color.name %></a>
     </div>
     <% end %>
   </div>

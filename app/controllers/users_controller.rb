@@ -10,17 +10,11 @@ class UsersController < ApplicationController
   @user = User.find(params[:id])
   @user_email = @user.email
   @last_login = @user.last_sign_in_at
-  @avatar = @user.avatar
-  @collection = @user.looks
-  # @boosts_received = @user.boosts
-  #submitted looks
-  #boosts recieved
-  #boosts given
-  end
 
-  def collection
-    @user = User.find(params[:id])
-    @user_email = @user.email
+  @number_looks = Look.where(user_id: @user.id).length
+
+  @avatar = @user.avatar
+  @looks = @user.looks
   end
 
   def destroy
