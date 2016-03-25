@@ -23,6 +23,15 @@
 
 .room3 {
   background-image:url("bed.jpg");
+  img.bed {
+filter: url("bed.jpg"); /* Firefox 3.5+ */
+filter: gray; /* IE6-9 */
+-webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+}
+img.bed:hover {
+filter: none;
+-webkit-filter: grayscale(0%);
+}
 }
 
 .room4 {
