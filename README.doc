@@ -4,6 +4,7 @@ House of Hues
 
   The Need:
 
+
   Our Solution
 
 
@@ -15,7 +16,12 @@ House of Hues
 
   House of Hues Development Process:
     Initial Meeting:
-
+      Project/Concept Brainstorm
+        -Initial Concept: Community Forum (codename: "Muscle Memories")
+          -Topic specific discussion boards with commenting and upvoting
+        -Midday decision to change project
+          -Took personal project portfolios into account
+          -Had a more defined/specific use case
 
     Needs Assessment:
 
@@ -26,28 +32,30 @@ House of Hues
     Site Outline:
 
 
-    Site Map:
-
-
-    Wireframes:
+    Site Map & Wireframes:
+      <img>
+      *Built on notebook (an analog open-source platform) & using pencil
 
 
     Content Outline:
 
 
     Assets:
-
+      3rd party hosted pictures found through Google image search
 
     Coding:
 
 
     Validation:
+      Page default iteration methodology
 
 
     Content Population & Database Seeding:
+      3rd party hosted pictures found through Google image search
 
 
     Testing
+      
 
 
 
@@ -86,13 +94,13 @@ Lauren
 
 
 Noble
-  Rose:
+  Rose:  Understanding how psql/MVC/display error interaction
 
-  Bud:
+  Bud:    Team communication/project management methods
 
-  Thorn:
+  Thorn:  Git/Heroku time theifs
 
-  Seed:
+  Seed:   Areas
 
 
 
