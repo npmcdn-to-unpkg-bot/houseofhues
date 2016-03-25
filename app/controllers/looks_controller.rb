@@ -12,12 +12,12 @@ class LooksController < ApplicationController
     @room_id = params[:room_id]
 
     if @color_id == nil && @room_id == nil
-      redirect_to :looks
+      redirect_to :root
     else if @color_name = Color.find(@color_id).name
-    @room_name = Room.find(@room_id).name
-      end
-    end 
+      @room_name = Room.find(@room_id).name
     end
+    end
+  end
 
   def create
     @look = current_user.looks.build
