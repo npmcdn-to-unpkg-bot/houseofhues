@@ -57,11 +57,11 @@ class LooksController < ApplicationController
   def update
   end
 
-  def trend
-    @looks = Look.find(params[:boosts])
-    @looks.look_items.first.move_to_bottom
-    @looks.look_items.last.move_higher
-  end
+  # def trend
+  #   @looks = Look.find(params[:boosts])
+  #   @looks.look_items.first.move_to_bottom
+  #   @looks.look_items.last.move_higher
+  # end
 
   def upvote
     @look = Look.find(params[:id])
