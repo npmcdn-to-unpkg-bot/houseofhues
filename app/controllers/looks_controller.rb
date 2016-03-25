@@ -50,11 +50,11 @@ class LooksController < ApplicationController
   def update
   end
 
-  def trend
-    @looks = Look.find(params[:boosts])
-    @looks.look_items.first.move_to_bottom
-    @looks.look_items.last.move_higher
-  end
+  # def trend
+  #   @looks = Look.find(params[:boosts])
+  #   @looks.look_items.first.move_to_bottom
+  #   @looks.look_items.last.move_higher
+  # end
 
   def upvote
     @look = Look.find(params[:id])
@@ -62,11 +62,4 @@ class LooksController < ApplicationController
     @look.votes.create
     redirect_to(looks_path)
   end
-  #
-  # def update_look_boosts
-  #   @look = Look.find(@look.id)
-  #   self.looks.boosts += 1
-  #   self.looks.save
-  # end
-
 end
