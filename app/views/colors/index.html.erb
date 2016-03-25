@@ -1,7 +1,46 @@
 
 <div class="container">
   <div class="row">
-    <h1>editing this page first thing in the morning</h1>
+
+
+    <div class="container grid">
+      <div id="grid-item-wrapper">
+        <h1>Trending Looks</h1>
+        <% @looks_boosts.each do |look| %>
+          <div class="grid-item">
+            <h4><%=look.title%></h4>
+            <div class="look-info">
+            <div class="img-container">
+              <img src="<%=look.img%>" class="grid-img">
+              <div class="boost-button"><%= button_to '+1', upvote_look_path(look), method: :post %></div>
+            </div>
+              <p>boosted <b><%=look.votes.count%></b> times</p>
+              <p>uploaded by <a href="/<%=look.user.id%>"><%= look.user.email %></a></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="container grid">
+      <div id="grid-item-wrapper">
+        <h1>Newest Looks</h1>
+        <% @looks_newest.each do |look| %>
+          <div class="grid-item">
+            <h4><%=look.title%></h4>
+            <div class="look-info">
+            <div class="img-container">
+              <img src="<%=look.img%>" class="grid-img">
+              <div class="boost-button"><%= button_to '+1', upvote_look_path(look), method: :post %></div>
+            </div>
+              <p>boosted <b><%=look.votes.count%></b> times</p>
+              <p>uploaded by <a href="/<%=look.user.id%>"><%= look.user.email %></a></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
     <p><%= link_to "View All Looks", looks_path %><p>
 
     <% @colors.each do |color| %>
