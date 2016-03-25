@@ -57,23 +57,20 @@ House of Hues
 
 
     Testing
-
-
-
+      We don't make errors!
 
 
 
 3. Plan a rose (something you’re proud of), a bud (something you could develop more), a thorn (something that gave you trouble), and a seed (if you were to start over, what would you do differently?)
 
 Alison Mae
-  Rose:
+  Rose: Trending looks
 
-  Bud:
+  Bud: Look CSS
 
-  Thorn:
+  Thorn: Delete Dialog
 
-  Seed:
-
+  Seed: Instagram API
 
 James
   Rose: I feel more comfortable with rails
@@ -84,25 +81,23 @@ James
 
   Seed:
 
-
 Lauren
-  Rose:
+  Rose: Project Management
 
-  Bud:
+  Bud: HTML, CSS cleanup
 
-  Thorn:
+  Thorn: Communication methods
 
-  Seed:
-
+  Seed:  Search functionality
 
 Noble
   Rose:  Understanding how psql/MVC/display error interaction
 
   Bud:    Team communication/project management methods
 
-  Thorn:  Git/Heroku time theifs
+  Thorn:  Git/Heroku time theives
 
-  Seed:   Time ma
+  Seed:   CSS, Project Structure, Paperclip
 
 
 
