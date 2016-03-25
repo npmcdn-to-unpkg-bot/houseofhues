@@ -86,13 +86,13 @@ James
 
 
 Lauren
-  Rose:
+  Rose: the entire project... I had a ton of fun making it.
 
-  Bud:
+  Bud: some cleaner html & css
 
-  Thorn:
+  Thorn: communication at first, mobile-first transition was a little funky, dealing with the colorroom table we originally had
 
-  Seed:
+  Seed: perhaps have a different way to search for looks
 
 
 Noble
