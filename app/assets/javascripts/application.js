@@ -60,9 +60,4 @@ $(function() {
   $('[class^="room"]').click(function () {
     $('form').submit();
   });
-
-  //initialize masonry.js
-  $('.grid').masonry({
-    itemSelector: '.grid-item',
-  });
 });

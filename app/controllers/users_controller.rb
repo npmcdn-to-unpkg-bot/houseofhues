@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   @number_looks = Look.where(user_id: @user.id).length
 
   @avatar = @user.avatar
-  @looks = @user.looks
+  @looks = @user.looks.order(created_at: :desc)
   end
 
   def destroy
