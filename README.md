@@ -3,13 +3,13 @@ House of Hues
 1. Demo
 
   The Need:
-
+    An image-based way to understand and discover the harmonies & effects of color in physical space
 
   Our Solution
+    A Pinterst-like forum that redefines the 'Minimum' in "Minimum Viable Product"
 
-
-                    -Driver: Alison Mae
-                    -Presenters: Lauren, James, Noble & Alison Mae
+        -Driver: Alison Mae
+        -Presenters: Lauren, James, Noble & Alison Mae
 
 
 2. Describe your process from planning to production. Show wireframes and/or ERD’s.
@@ -24,7 +24,7 @@ House of Hues
           -Had a more defined/specific use case
 
     Needs Assessment:
-
+      Rails/Heroku/Gems/Communication
 
     Research & Feasibility Assessment:
       Assess aggregate team knowledge
@@ -57,23 +57,20 @@ House of Hues
 
 
     Testing
-
-
-
+      We don't make errors!
 
 
 
 3. Plan a rose (something you’re proud of), a bud (something you could develop more), a thorn (something that gave you trouble), and a seed (if you were to start over, what would you do differently?)
 
 Alison Mae
-  Rose:
+  Rose: Trending looks
 
-  Bud:
+  Bud: Look CSS
 
-  Thorn:
+  Thorn: Delete Dialog
 
-  Seed:
-
+  Seed: Instagram API
 
 James
   Rose: I feel more comfortable with rails
@@ -84,25 +81,24 @@ James
 
   Seed:
 
-
 Lauren
-  Rose: the entire project... I had a ton of fun making it.
 
-  Bud: some cleaner html & css
+  Rose: Project Management
 
-  Thorn: communication at first, mobile-first transition was a little funky, dealing with the colorroom table we originally had
+  Bud: HTML, CSS cleanup
 
-  Seed: perhaps have a different way to search for looks
+  Thorn: Communication methods
 
+  Seed:  Search functionality
 
 Noble
   Rose:  Understanding how psql/MVC/display error interaction
 
   Bud:    Team communication/project management methods
 
-  Thorn:  Git/Heroku time theifs
+  Thorn:  Git/Heroku time theives
 
-  Seed:   Time ma
+  Seed:   CSS, Project Structure, Paperclip
 
 
 
