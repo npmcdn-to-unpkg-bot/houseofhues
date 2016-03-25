@@ -39,10 +39,6 @@ class LooksController < ApplicationController
     @room_id = params[:room_id]
     @user_id = params[:user_id]
 
-
-    if @looks == nil
-        puts "Sorry, no one has posted any looks yet, check back soon for new looks! "
-    end 
     if @room_id == nil
       redirect_to controller: "rooms", action: "index", color_id: @color_id
       else if @color_id != nil && @room_id != nil
