@@ -16,17 +16,24 @@ ActiveRecord::Schema.define(version: 20160324171911) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "color_rooms", force: :cascade do |t|
-    t.integer "color_id"
-    t.integer "room_id"
-  end
-
-  add_index "color_rooms", ["color_id"], name: "index_color_rooms_on_color_id", using: :btree
-  add_index "color_rooms", ["room_id"], name: "index_color_rooms_on_room_id", using: :btree
-
   create_table "colors", force: :cascade do |t|
     t.string "name"
   end
+
+  create_table "looks", force: :cascade do |t|
+    t.integer  "color_id"
+    t.integer  "room_id"
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "img"
+    t.integer  "boosts",     default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "looks", ["color_id"], name: "index_looks_on_color_id", using: :btree
+  add_index "looks", ["room_id"], name: "index_looks_on_room_id", using: :btree
+  add_index "looks", ["user_id"], name: "index_looks_on_user_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
@@ -53,6 +60,7 @@ ActiveRecord::Schema.define(version: 20160324171911) do
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
+    t.string   "avatar"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -63,7 +71,6 @@ ActiveRecord::Schema.define(version: 20160324171911) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -75,7 +82,8 @@ ActiveRecord::Schema.define(version: 20160324171911) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "color_rooms", "colors"
-  add_foreign_key "color_rooms", "rooms"
+  add_foreign_key "looks", "colors"
+  add_foreign_key "looks", "rooms"
+  add_foreign_key "looks", "users"
   add_foreign_key "profiles", "users"
 end
