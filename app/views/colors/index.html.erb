@@ -7,17 +7,18 @@
 </div>
 
 <div class="container">
-  <div class="row">
+  <div class="row border-top">
     <div class="col-xs-12">
-      <h1>Find Your Next Room Inspiration</h1>
+      <h1 class="extra-margin">Find Your Next Room Inspiration</h1>
       <p class="find text-center">House of Hues is a database of user-submitted interior design inspirations (looks) and allows users to find ideas based on color & room. If you like a look, give it a boost! You must sign up to submit a look or to use our search. 😀</p>
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12 col-md-6 text-center">
-      <p><h1><%= link_to "View All Looks", looks_path %><p>
+    <div class="col-xs-12 text-center">
+      <h1><%= link_to "View All Looks", looks_path %></h1>
     </div>
-    <div class="col-xs-12 col-md-6 text-center color">
+    <div class="col-xs-12 text-center color">
+      <h1>or</h1>
       <h1>Start Search By Color</h1>
       <p class="find">We currently offer a search by the<br> 2016, 2015, and 2014 colors of the year.</p>
       <% @colors.each do |color| %>

@@ -7,8 +7,17 @@
 }
 
 .find {
-  margin: 30px;
+  margin: 10px 30px 30px;
   font-size: 1.4em;
+}
+
+.extra-margin {
+  margin: 25px;
+}
+
+.border-top {
+  margin-bottom: 10px;
+  border-bottom: 1px solid grey;
 }
 
 .home-title {
@@ -18,77 +27,123 @@
   border-bottom: 1px solid grey;
 }
 
-.color div {
-  margin-bottom: 5px;
-  width: 100%;
-  color: white;
-  font-size: 1.6em;
-  padding: 15px;
-  text-shadow: 1px 1px 3px black;
-}
 
-.color a {
-  &:nth-child(3) div {
-    background-color: #b76e79;
-    &:hover {
-      background-color: #f4f4f4;
-      color: #b76e79;
-      text-shadow: none;
-    }
+.color {
+  margin-bottom: 20px;
+
+  h1:first-of-type {
+    line-height: 0;
   }
-  &:nth-child(4) div {
-    background-color: #b0cddf;
-    &:hover {
-      background-color: #f4f4f4;
-      color: #b0cddf;
-      text-shadow: none;
-    }
+
+  h1 {
+    position: relative;
+    top: -15px;
   }
-  &:nth-child(5) div {
-    background-color: #955251;
-    &:hover {
-      background-color: #f4f4f4;
-      color: #955251;
-      text-shadow: none;
-    }
+
+  div {
+    margin: 0 auto 5px;
+    width: 80%;
+    color: white;
+    font-size: 1.6em;
+    padding: 15px;
+    text-shadow: 1px 1px 3px black;
   }
-  &:nth-child(6) div {
-    background-color: #b163a3;
-    &:hover {
-      background-color: #f4f4f4;
-      color: #b163a3;
-      text-shadow: none;
+
+  a {
+   &:nth-child(4) div {
+     background-color: #b76e79;
+     &:hover {
+       background-color: #f4f4f4;
+       color: #b76e79;
+       text-shadow: none;
+     }
+   }
+   &:nth-child(5) div {
+     background-color: #b0cddf;
+     &:hover {
+       background-color: #f4f4f4;
+       color: #b0cddf;
+       text-shadow: none;
+     }
+   }
+   &:nth-child(6) div {
+     background-color: #955251;
+     &:hover {
+       background-color: #f4f4f4;
+       color: #955251;
+       text-shadow: none;
+     }
+   }
+   &:nth-child(7) div {
+     background-color: #b163a3;
+     &:hover {
+       background-color: #f4f4f4;
+       color: #b163a3;
+       text-shadow: none;
+     }
     }
-  }
-  &:hover {
-    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
 #banner {
   margin-top: -20px;
-  height: 450px;
+  height: 200px;
   width: 100%;
-  background-position: 50% 0;
+  background-size: cover;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
   background-image: url("house.jpeg");
-  margin-bottom: 75px;
+  margin-bottom: 20px;
 
   h1 {
     font-style: italic;
     font-weight: bold;
     text-align: center;
     position: relative;
-    font-size: 4em;
-    top: 70%;
+    font-size: 2.5em;
+    top: 20%;
     color: white;
-    text-shadow: -2px -2px 3px black;
-    text-shadow: -1px -1px 3px black;
     text-shadow: 0px 0px 3px black;
     text-shadow: 1px 1px 3px black;
     text-shadow: 2px 2px 3px black;
     text-shadow: 3px 3px 3px black;
+    text-shadow: 4px 4px 3px black;
+    text-shadow: 4px 4px 3px black;
+  }
+}
+
+@media (min-width: 768px) {
+  .color div {
+    width: 50%;
+  }
+
+  #banner {
+    height: 350px;
+    margin-bottom: 50px;
+
+    h1 {
+      font-size: 4em;
+    }
+  }
+}
+
+@media (min-width: 991px) {
+  #banner {
+    height: 400px;
+    margin-bottom: 10px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 1200px) {
+  #banner {
+    margin-bottom: 25px;
+    background-size: contain;
   }
 }
