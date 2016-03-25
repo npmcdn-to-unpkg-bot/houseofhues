@@ -67,6 +67,6 @@ class LooksController < ApplicationController
     @look = Look.find(params[:id])
     Look.increment_counter(:boosts, params[:id])
     @look.votes.create
-    redirect_to(looks_path)
+    redirect_to(:back)
   end
 end
