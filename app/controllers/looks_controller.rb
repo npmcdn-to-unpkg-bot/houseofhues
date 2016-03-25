@@ -21,6 +21,7 @@ class LooksController < ApplicationController
     @look.color_id = params[:color_id]
     @look.room_id = params[:room_id]
     @look.save
+
     render :text => '<script type="text/javascript">alert("Look Added!"); window.close(); window.opener.location.reload(false);</script>'
     end
 
@@ -29,11 +30,12 @@ class LooksController < ApplicationController
     @room_id = params[:room_id]
     @user_id = params[:user_id]
 
-
     if @room_id == nil
       redirect_to controller: "rooms", action: "index", color_id: @color_id
       else if @color_id != nil && @room_id != nil
         @looks = Look.where(color_id: @color_id, room_id: @room_id)
+        @color_name = Color.find(@color_id).name
+        @room_name = Room.find(@room_id).name
       end
     end
   end
